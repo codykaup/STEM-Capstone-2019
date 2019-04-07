@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileChildAddComponent } from './profile-child-add/profile-child-add.component';
+import { ProfileOrganizationAddComponent } from './profile-organization-add/profile-organization-add.component';
 
 const routes: Routes = [
 
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: 'view', component: ProfileComponent },
       { path: 'childadd', component: ProfileChildAddComponent },
+      { path: 'organizationadd', component: ProfileOrganizationAddComponent}
     ],
   }
 ];
