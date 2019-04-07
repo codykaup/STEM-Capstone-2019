@@ -5,5 +5,16 @@ class Organization(models.Model):
     approved = models.BooleanField(default=False)
     reviewed = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['reviewed', '-approved', 'name']
+
     def __str__(self):
-        return self.name
+        name = self.name
+        if not self.reviewed:
+            name += " [Not Reviewed]"
+        else:
+            if self.approved:
+                name += " [Approved]"
+            else:
+                name += " [Declined]"
+        return name
