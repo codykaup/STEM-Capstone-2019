@@ -6,6 +6,7 @@ class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
         model = Organization
         fields = (
             "name",
-            "is_approved",
+            "approved",
+            "reviewed",
             "url"
         )
