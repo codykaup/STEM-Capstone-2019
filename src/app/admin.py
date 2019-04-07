@@ -27,6 +27,8 @@ class OrganizationAdmin(admin.ModelAdmin):
     mark_declined.short_description = "Mark selected organizations as declined"
         
 
+admin.site.disable_action('delete_selected')
+
 admin.site.register(User)
 admin.site.register(Event)
 admin.site.register(Organization, OrganizationAdmin)
