@@ -3,6 +3,7 @@ from app.models.user import User
 from app.models.event import Event
 from app.models.organization import Organization
 from app.models.tag import Tag
+from app.models.educator_request import EducatorRequest
 
 
 class OrganizationAdmin(admin.ModelAdmin):
@@ -33,3 +34,4 @@ admin.site.register(User)
 admin.site.register(Event)
 admin.site.register(Organization, OrganizationAdmin)
 admin.site.register(Tag)
+admin.site.register(EducatorRequest)
