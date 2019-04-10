@@ -40,13 +40,13 @@ export class RegisterComponent implements OnInit {
       userGroup: this.fb.group({
         firstName: ['', [Validators.required, Validators.maxLength(50)]],
         lastName: ['', [Validators.required, Validators.maxLength(50)]],
-        dob: [''],
+        dob: ['', [Validators.required]],
         phone: ['', [Validators.pattern(this.phonePattern)]],
       }),
       addressGroup: this.fb.group({
-        address: [''],
-        city: [''],
-        state: [''],
+        address: ['', [Validators.required, Validators.maxLength(100)]],
+        city: ['', [Validators.required, Validators.maxLength(50)]],
+        state: ['', [Validators.required, Validators.maxLength(50)]],
         zip: ['', [Validators.pattern(this.zipPattern)]],
       }),
       loginGroup: this.fb.group(

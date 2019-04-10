@@ -13,6 +13,9 @@ export class EventListComponent implements OnInit {
   date: string;
   @Input()
   event_type: string;
+  @Input()
+  event_address: string;
+
 
   constructor() { }
 

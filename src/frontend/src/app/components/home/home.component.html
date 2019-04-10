@@ -8,7 +8,7 @@
      </tr>
      <tr>     
         <div  fxFlex *ngFor="let event of getEveByCat(cat)" >
-          <app-event-list [name]="event.name" [date]="event.date" [event_type]="event.e_type"></app-event-list>
+          <app-event-list (click)="popout(event)" [name]="event.name" [date]="event.date" [event_type]="event.e_type" [event_address]="event.address"></app-event-list>
         </div>
      </tr>
     </table>    

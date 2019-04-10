@@ -34,7 +34,7 @@ export class ProfileChildAddComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.maxLength(50)]],
       lastName: ['', [Validators.required, Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email, Validators.maxLength(200)]],
-      dob: [''],
+      dob: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]]
     },

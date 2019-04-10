@@ -43,6 +43,7 @@ import { ContactusComponent } from './components/layout/contactus/contactus.comp
 import { FormUserAddComponent } from './components/shared/form-user-add/form-user-add.component';
 import { TermsComponent } from './components/shared/terms/terms.component';
 import { ConfirmationComponent } from './components/shared/confirmation/confirmation.component';
+import { EventDetailsComponent } from './components/shared/eventdetailspopup/eventdetails.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ConfirmationComponent } from './components/shared/confirmation/confirma
     FormUserAddComponent,
     TermsComponent,
     ConfirmationComponent,
+    EventDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -95,9 +97,10 @@ import { ConfirmationComponent } from './components/shared/confirmation/confirma
     FormUserAddComponent,
     TermsComponent,
     ConfirmationComponent,
+    EventDetailsComponent
 
   ],
   entryComponents: [TermsComponent,
-    ConfirmationComponent],
+    ConfirmationComponent, EventDetailsComponent],
 })
 export class SharedModule { }
