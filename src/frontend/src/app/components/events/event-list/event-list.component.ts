@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Tag } from 'src/app/models/tag';
 
 @Component({
   selector: 'app-event-list',
@@ -14,12 +15,21 @@ export class EventListComponent implements OnInit {
   @Input()
   event_type: string;
   @Input()
-  event_address: string;
+  tags: Tag[]
+  @Input()
+  event_address: string
 
+  imageSource: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.imageSource = EventPhotoMap[this.event_type];
   }
 
+}
+
+const EventPhotoMap: any = {
+  'Community': '../../assets/images/building_construction.png',
+  'Camp': '../../assets/images/camp_tent.jpg'
 }

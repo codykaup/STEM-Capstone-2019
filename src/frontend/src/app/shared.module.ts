@@ -40,7 +40,6 @@ import {
 } from '@angular/material';
 
 import { ContactusComponent } from './components/layout/contactus/contactus.component';
-import { FormUserAddComponent } from './components/shared/form-user-add/form-user-add.component';
 import { TermsComponent } from './components/shared/terms/terms.component';
 import { ConfirmationComponent } from './components/shared/confirmation/confirmation.component';
 import { EventDetailsComponent } from './components/shared/eventdetailspopup/eventdetails.component';
@@ -48,7 +47,6 @@ import { EventDetailsComponent } from './components/shared/eventdetailspopup/eve
 @NgModule({
   declarations: [
     ContactusComponent,
-    FormUserAddComponent,
     TermsComponent,
     ConfirmationComponent,
     EventDetailsComponent
@@ -94,7 +92,6 @@ import { EventDetailsComponent } from './components/shared/eventdetailspopup/eve
   ],
   exports: [
     ContactusComponent,
-    FormUserAddComponent,
     TermsComponent,
     ConfirmationComponent,
     EventDetailsComponent

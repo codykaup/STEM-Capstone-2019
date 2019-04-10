@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   events: Event[];
   categories: Tag[];
   tevents: Event[];
+  mySlideOptions={dots: false, nav: true};
 
   constructor(private eventService: EventService, private dialog: MatDialog) { } 
 
