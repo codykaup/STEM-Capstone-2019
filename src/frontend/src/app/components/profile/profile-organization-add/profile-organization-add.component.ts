@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Organization } from '../../../models/organization';
+import { OrganizationService } from '../../../services/organization.service';
 import { MatSnackBar, MatSnackBarVerticalPosition, MatSnackBarHorizontalPosition } from '@angular/material';
 
 @Component({
@@ -15,6 +16,8 @@ export class ProfileOrganizationAddComponent implements OnInit {
   topPosition: MatSnackBarVerticalPosition = 'top';
   rightPosition: MatSnackBarHorizontalPosition = 'right';
   organization: Organization;
+  organizationService: OrganizationService;
+  organizationName: string;
 
   constructor(private fb: FormBuilder, private router: Router, private snackBar: MatSnackBar) { }
 
@@ -34,9 +37,8 @@ export class ProfileOrganizationAddComponent implements OnInit {
     console.log(this.organizationName);
 
     this.organizationService
-      .register(
-        this.requestForm.get('organizationName').value,
-        'http://localhost:8000/api/v1/organizations/')
+      .addOrganization(
+        this.requestForm.get('organizationName').value)
       .subscribe(
         organization => {
           this.snackBar.open('Request sent successfully. Please wait for administrator review.', 'X', {
