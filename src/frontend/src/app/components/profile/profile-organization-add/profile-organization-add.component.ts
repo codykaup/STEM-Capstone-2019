@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Organization } from '../../../models/organization';
-<<<<<<< HEAD
 import { OrganizationService } from '../../../services/organization.service';
-=======
->>>>>>> f47731cf88ab9d3e2912c0cca2ae43dea59b7cf2
 import { MatSnackBar, MatSnackBarVerticalPosition, MatSnackBarHorizontalPosition } from '@angular/material';
 
 @Component({
